@@ -26,7 +26,7 @@ def test_destination_csv(case: str):
         # load csv file data using csv library's dictionary reader
         csvReader = csv.DictReader(csvf)
 
-        if len(list(csvReader)) == 0:
+        if not list(csvReader):
             sys.exit(1)
 
         # convert each csv row into python dict
